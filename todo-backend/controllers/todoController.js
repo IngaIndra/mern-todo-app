@@ -5,7 +5,7 @@ const Todos = require('../dbTodos')
 // Get Todos List CBf
 const getTodos = async (req, res) => {
     try {
-        const allTodos = await Todos.find({}.sort({ createdAt: -1 }))
+        const allTodos = await Todos.find({}).sort({ createdAt: -1 })
         res.status(200).send(allTodos)
     } catch (error) {
         res.status(400).send(error.message);
